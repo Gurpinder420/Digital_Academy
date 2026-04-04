@@ -248,7 +248,7 @@
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 80px; align-items: center; width: 100%;
       max-width: 1200px; margin: 0 auto;
-      
+     
       padding: 20px;
     }
 
@@ -592,10 +592,11 @@
     /* ── RESPONSIVE ── */
     @media(max-width:1024px) {
       .hero-visual { display: none; }
+   
       .hero-content { max-width: 100%; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
-    @media(max-width:768px) {
+    @media(max-width:968px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
       .mobile-nav { display: flex; }
@@ -607,7 +608,13 @@
       section { padding: 70px 5%; }
       .hero-btns { flex-direction: column; }
       .btn-primary, .btn-outline { justify-content: center; }
+      .about-hero-inner
+     {
+      display: flex;
+      flex-direction: column;
+     }
     }
+     
 
     /* Color helpers */
     .g1 { background: linear-gradient(135deg,#667eea,#764ba2); }
