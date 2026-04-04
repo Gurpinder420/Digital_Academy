@@ -613,6 +613,10 @@
       display: flex;
       flex-direction: column;
      }
+     .step
+     {
+      max-width: 320px;
+     }
     }
      
 
