@@ -370,6 +370,332 @@
       animation-name: counter-spin3;
     }
     @keyframes counter-spin3 { to { transform: translateY(-50%) rotate(360deg); } }
+  /* founder */
+  .cofounder-section {
+      min-height: 100vh;
+      padding: 120px 5% 100px;
+      background: var(--darker);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Background Effects */
+    .cofounder-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
+    }
+
+    .bg-glow {
+      position: absolute;
+      top: 20%;
+      right: 0;
+      width: 50%;
+      height: 60%;
+      background: radial-gradient(ellipse, rgba(108,99,255,0.15), transparent 70%);
+      filter: blur(60px);
+      pointer-events: none;
+    }
+
+    .bg-glow-left {
+      position: absolute;
+      bottom: 10%;
+      left: 0;
+      width: 40%;
+      height: 50%;
+      background: radial-gradient(ellipse, rgba(255,101,132,0.1), transparent 70%);
+      filter: blur(60px);
+      pointer-events: none;
+    }
+
+    .grid-lines {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image: linear-gradient(rgba(108,99,255,0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(108,99,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    /* Section Header */
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      padding: 6px 20px;
+      border-radius: 50px;
+      background: rgba(108, 99, 255, 0.12);
+      border: 1px solid rgba(108, 99, 255, 0.25);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #a89fff;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .section-title span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Co-Founder Card - Hero Style */
+    .cofounder-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 48px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      transition: all 0.5s ease;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .cofounder-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 0;
+    }
+
+    /* Image Side */
+    .cofounder-image {
+      position: relative;
+      min-height: 500px;
+      background: linear-gradient(135deg, #1a1a2e, #0f0f1a);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .cofounder-img {
+      width: 100%;
+      max-width: 380px;
+      height: auto;
+      border-radius: 32px;
+      object-fit: cover;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+      transition: transform 0.5s ease;
+      border: 2px solid rgba(108,99,255,0.3);
+    }
+
+    .cofounder-card:hover .cofounder-img {
+      transform: scale(1.02);
+    }
+
+    /* Badge Floating */
+    .exp-badge {
+      position: absolute;
+      bottom: 60px;
+      right: 30px;
+      background: var(--gradient);
+      padding: 12px 20px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 30px rgba(108,99,255,0.4);
+      animation: pulseBadge 2s infinite;
+    }
+
+    @keyframes pulseBadge {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.05); opacity: 1; box-shadow: 0 15px 35px rgba(108,99,255,0.6); }
+    }
+
+    /* Content Side */
+    .cofounder-content {
+      padding: 50px 50px 50px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .greeting {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--primary);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .cofounder-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      margin-bottom: 8px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cofounder-title {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: inline-block;
+    }
+
+    .cofounder-bio {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 28px;
+      font-size: 1rem;
+    }
+
+    .highlight-list {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .highlight-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .highlight-list li i {
+      color: var(--accent);
+      font-size: 1.1rem;
+      width: 24px;
+    }
+
+    /* Stats Row */
+    .stats-row {
+      display: flex;
+      gap: 30px;
+      margin: 30px 0 35px;
+      flex-wrap: wrap;
+    }
+
+    .stat-block {
+      text-align: left;
+    }
+
+    .stat-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      background: var(--gradient2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.5px;
+    }
+
+    /* Social & Contact */
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-4px);
+      border-color: var(--primary);
+    }
+
+    .btn-connect {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      background: var(--gradient);
+      border-radius: 50px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(108,99,255,0.4);
+    }
+
+    .btn-connect:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(108,99,255,0.6);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
     /* ── COURSES ── */
     .courses { background: var(--darker); }
@@ -659,6 +985,22 @@ height: 380px;
       .steps-container::before { display: none; }
       .footer-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; text-align: center; }
+      .cofounder-inner {
+        grid-template-columns: 1fr;
+      }
+      .cofounder-image {
+        min-height: 400px;
+      }
+      .cofounder-content {
+        padding: 40px 30px;
+      }
+      .exp-badge {
+        bottom: 20px;
+        right: 20px;
+      }
+      .cofounder-section {
+        padding: 100px 5% 80px;
+      }
     }
     @media(max-width:480px) {
       section { padding: 70px 5%; }
@@ -679,6 +1021,23 @@ height: 380px;
      {
       max-width: 320px;
      }
+      .cofounder-content {
+        padding: 30px 20px;
+      }
+      .stats-row {
+        gap: 20px;
+      }
+      .stat-number {
+        font-size: 1.5rem;
+      }
+      .btn-connect {
+        width: 100%;
+        justify-content: center;
+      }
+      .exp-badge {
+        font-size: 0.7rem;
+        padding: 8px 16px;
+      }
     }
      
 
