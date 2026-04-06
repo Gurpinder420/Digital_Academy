@@ -669,6 +669,12 @@ height: 380px;
       display: flex;
       flex-direction: column;
      }
+      .testi-wrapper {
+  
+  width: 480px;
+  
+   
+}
      .step
      {
       max-width: 320px;
