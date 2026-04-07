@@ -483,10 +483,16 @@ skills in today’s competitive market.</p>
   </div>
   
   <div class="testi-grid">
-      <div class="testi-wrapper">
-    <!-- <button class="nav-btn left" onclick="scrollTesti(-1)">❮</button> -->
- <div class="testi-slider" id="testiSlider">
-    <div class="testi-card">
+
+ <swiper-container class="mySwiper" 
+      navigation="true" 
+       
+      space-between="30" 
+      breakpoints='{"640": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 3}}'
+      grab-cursor="true">
+
+     <swiper-slide>
+       <div class="testi-card">
       <div class="quote">"</div>
       <div class="testi-stars">★★★★★</div>
       <p>Refer India Digital Academy completely changed my career. I went from a barista to a full-stack developer in 6 months. The mentorship and project-based learning made all the difference. I'm now earning 3x my previous salary!</p>
@@ -495,9 +501,11 @@ skills in today’s competitive market.</p>
         <div><div class="author-name">Anu Sharma</div><div class="author-role">Full-Stack Dev</div></div>
       </div>
     </div>
-    </div>
-     <div class="testi-slider" id="testiSlider">
-    <div class="testi-card">
+     </swiper-slide>
+   
+   
+     <swiper-slide>
+      <div class="testi-card">
       <div class="quote">"</div>
       <div class="testi-stars">★★★★★</div>
       <p>it’s a complete transformation.The AI Masterclass is absolutely incredible. The content is cutting-edge and the instructor explains complex concepts so simply. I built 5 AI projects and got hired at an AI startup within 2 months!</p>
@@ -506,9 +514,11 @@ skills in today’s competitive market.</p>
         <div><div class="author-name">Gurpinder Singh</div><div class="author-role">ML Engineer </div></div>
       </div>
     </div>
-    </div>
-     <div class="testi-slider" id="testiSlider">
-    <div class="testi-card">
+     </swiper-slide>
+    
+   
+    <swiper-slide>
+       <div class="testi-card">
       <div class="quote">"</div>
       <div class="testi-stars">★★★★★</div>
       <p>As a designer, I thought UI/UX would be boring — Refer India Digital Academy proved me completely wrong. The Figma deep-dives and real-world design challenges pushed me to a totally new level. </p>
@@ -517,9 +527,11 @@ skills in today’s competitive market.</p>
         <div><div class="author-name">Sukhwinder Singh</div><div class="author-role">Senior UX Designer </div></div>
       </div>
     </div>
-    </div>
-     <div class="testi-slider" id="testiSlider">
-    <div class="testi-card">
+    </swiper-slide>
+   
+   
+    <swiper-slide>
+      <div class="testi-card">
   <div class="quote">"</div>
   <div class="testi-stars">★★★★★</div>
   <p>This program gave me the confidence to switch careers. The hands-on projects and real-world assignments helped me land my first tech job within months.I now feel confident tackling real industry problems and building applications.</p>
@@ -531,9 +543,11 @@ skills in today’s competitive market.</p>
     </div>
   </div>
 </div>
-</div>
- <div class="testi-slider" id="testiSlider">
-<div class="testi-card">
+    </swiper-slide>
+    
+
+ <swiper-slide>
+  <div class="testi-card">
   <div class="quote">"</div>
   <div class="testi-stars">★★★★★</div>
   <p>I had zero coding background, but the structured curriculum made everything easy to understand. The mentors were always available and super helpful.The step-by-step approach and real-world examples helped me build a strong foundation</p>
@@ -545,9 +559,11 @@ skills in today’s competitive market.</p>
     </div>
   </div>
 </div>
-</div>
- <div class="testi-slider" id="testiSlider">
-<div class="testi-card">
+ </swiper-slide>
+
+
+ <swiper-slide>
+  <div class="testi-card">
   <div class="quote">"</div>
   <div class="testi-stars">★★★★★</div>
   <p>The best investment I made in myself. The live sessions, doubt support, and real projects helped me crack interviews confidently.I now approach technical interviews with clarity, confidence, and a strong problem-solving mindset</p>
@@ -558,11 +574,13 @@ skills in today’s competitive market.</p>
       <div class="author-role">Backend Developer </div>
     </div>
   </div>
-</div>  
 </div>
-<!-- <button class="nav-btn right" onclick="scrollTesti(1)">❯</button> -->
+ </swiper-slide>
+  
+
+ </swiper-container>
   </div>
-  </div>
+  
 </section>
 
 <!-- PRICING -->
@@ -816,5 +834,6 @@ skills in today’s competitive market.</p>
     });
   }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 </html>
