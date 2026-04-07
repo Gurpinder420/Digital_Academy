@@ -1146,6 +1146,12 @@ width: 360px;
        
         margin-top: -600px;
       }
+       swiper-container {
+    /* padding: 40px 0; */
+ 
+   width: 768px;
+   margin-left: -25px;
+  }
     }
     @media(max-width:480px) {
       section { padding: 70px 5%; }
